@@ -14,7 +14,7 @@
         <style>
         #map {
             width: 1222px;
-            height: 828px;
+            height: 1028px;
         }
         </style>
         <title></title>
@@ -69,6 +69,7 @@
             minNativeZoom: 0,
             maxNativeZoom: 19
         });
+        layer_OpenStreetMap_0;
         map.addLayer(layer_OpenStreetMap_0);
         function pop__1(feature, layer) {
             layer.on({
@@ -78,7 +79,8 @@
                     }
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
-                    } else {
+                    } 
+                    else {
                         layer.eachLayer(function(feature){
                             feature.closePopup()
                         });
@@ -130,7 +132,8 @@
                     }
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
-                    } else {
+                    } 
+                    else {
                         layer.eachLayer(function(feature){
                             feature.closePopup()
                         });
@@ -181,7 +184,8 @@
                     }
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
-                    } else {
+                    } 
+                    else {
                         layer.eachLayer(function(feature){
                             feature.closePopup()
                         });
@@ -244,15 +248,14 @@
                 return L.circleMarker(latlng, style__3_0(feature));
             },
         });
-        var cluster__3 = new L.MarkerClusterGroup({showCoverageOnHover: false,
-            spiderfyDistanceMultiplier: 2});
-        cluster__3.addLayer(layer__3);
-        bounds_group.addLayer(layer__3);
-        cluster__3.addTo(map);
+        var cluster__3 = new L.MarkerClusterGroup({showCoverageOnHover: false, spiderfyDistanceMultiplier: 2});
+            cluster__3.addLayer(layer__3);
+            bounds_group.addLayer(layer__3);
+            cluster__3.addTo(map);
         var baseMaps = {};
             L.control.layers(baseMaps,{'<img src="/test/legend/_3.png" /> 危険個所': cluster__3,'<img src="/test/legend/_2.png" /> 調査経路': layer__2,"OpenStreetMap": layer_OpenStreetMap_0,'<img src="/test/legend/_1.png" /> 調査エリア': layer__1,},{collapsed:true}).addTo(map);
             L.control.scale({position: 'bottomleft', maxWidth: 100, metric: true, imperial: false, updateWhenIdle: false}).addTo(map);
-        setBounds();
+            setBounds();
         </script>
     </body>
 </html>
