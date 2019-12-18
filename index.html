@@ -111,6 +111,9 @@
                 interactive: false,
             }
         }
+        
+        L.control.scale({position: 'bottomleft', maxWidth: 100, metric: true, imperial: false, updateWhenIdle: false}).addTo(map);
+ 
         map.createPane('pane__1');
         map.getPane('pane__1').style.zIndex = 401;
         map.getPane('pane__1').style['mix-blend-mode'] = 'normal';
@@ -252,9 +255,7 @@
             cluster__3.addLayer(layer__3);
             bounds_group.addLayer(layer__3);
             cluster__3.addTo(map);
-        L.control.layers(baseMaps,{'<img src="/test/legend/_3.png" /> 危険個所': cluster__3,'<img src="/test/legend/_2.png" /> 調査経路': layer__2,"OpenStreetMap": layer_OpenStreetMap_0,'<img src="/test/legend/_1.png" /> 調査エリア': layer__1,},{collapsed:true}).addTo(map);
-        L.control.scale({position: 'bottomleft', maxWidth: 100, metric: true, imperial: false, updateWhenIdle: false}).addTo(map);
-            setBounds();
+        L.control.layers(baseMaps,{'<img src="/test/legend/_3.png" /> 危険個所': cluster__3,'<img src="/test/legend/_2.png" /> 調査経路': layer__2,"OpenStreetMap": layer_OpenStreetMap_0,'<img src="/test/legend/_1.png" /> 調査エリア': layer__1,},{collapsed:true}).addTo(map); setBounds();
         </script>
     </body>
 </html>
